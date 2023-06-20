@@ -9,13 +9,17 @@
    <img src="./main/1/double_0.JPG" width=90%>
    <img src="./main/1/double_1.JPG" width=90%>
    <img src="./main/1/double_2.JPG" width=90%>
-   Шрифты, код на js загружаются по нескольку раз. Также 2 файла code.js с одинаковым кодом(см. HAR профиль).
-2) Лишний размер ресурса. Файлы с лишними комментариями/большими отступами. imageLeft_1628667062.5843.jpg и imageRight_1628667062.7146.jpg
+   |Шрифты, код на js загружаются по нескольку раз. Также 2 файла code.js с одинаковым кодом(см. HAR профиль).
+   user-recognition отправляет несколько POST запросов с ответом 200 и еще 2 OPTION запроса с ответом 204(см. HAR профиль).
+2) Лишний размер ресурса. Файлы с лишними комментариями/большими отступами.
+   imageLeft_1628667062.5843.jpg и imageRight_1628667062.7146.jpg
    одна и та же картинка, просто отзеркалено (см. HAR профиль).
    <img src="./main/1/overWeight_0.JPG" width=90%>
    <img src="./main/1/overWeight_1.JPG" width=90%>
    <img src="./main/1/overWeight_3.JPG" width=90%>
    <img src="./main/1/overWeight_4.JPG" width=90%>
+   На иконках используются не сжатые спрайты пнг(файл linkTo__sprite.png см. HAR профиль).
+   Немало файлов без минификации, с ненужными комментариями и лишними отступами.
 3) Медленно загружающиеся ресурсы
    <img src="./main/1/waterfall.JPG" width=90%>
 4) Ресурсы, блокирующие загрузку
@@ -23,6 +27,7 @@
    <img src="./main/1/wateer.JPG" width=90%>
 5) Что-то ещё (ресурсы которые упали с ошибкой)
    <img src="./main/1/error.JPG" width=90%>
+   Также много ответов со статусом 302, которые приводят к лишним запросам(см. HAR профиль).
 ### На вкладке Performance
 1) [Записать и сохранить в файл профиль загрузки страницы](./main/2/main.json)
 2) Измерить время в миллисекундах от начала навигации до событий First Paint (FP), First Contentful Paint (FCP), Largest Contentful Paint (LCP), DOM Content Loaded (DCL), Load
